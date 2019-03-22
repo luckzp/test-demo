@@ -21,6 +21,7 @@ public class TimeUtil {
         System.out.println("当前半年/后半年结束："+getHalfYearEndTime().toString());
         System.out.println("当前年开始："+getCurrentYearStartTime().toString());
         System.out.println("当前年结束："+getCurrentYearEndTime().toString());
+        System.out.println("hello world");
     }
 
     /**
