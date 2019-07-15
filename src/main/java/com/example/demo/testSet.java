@@ -1,13 +1,8 @@
 package com.example.demo;
 
-import cn.hutool.core.convert.Convert;
-
-import java.math.BigDecimal;
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author ZhangP
@@ -18,50 +13,49 @@ public class testSet {
 
     public static void main(String[] args) {
 
-        /**
-         * list.get(null)会报NULLPOINTER
-         */
-//        BigDecimal goodsTotal = BigDecimal.ZERO;
-//        BigDecimal a = new BigDecimal(30.00);
-//        for (int i = 0; i < 2; i++){
-//            goodsTotal = goodsTotal.add(a);
-//        }
 
-
-        Timestamp ts = new Timestamp(System.currentTimeMillis());
-        Date date = new Date();
-        try {
-            date = ts;
-            System.out.println(new Timestamp(System.currentTimeMillis()));
-        } catch (Exception e) {
-            e.printStackTrace();
+        String ak = "13754521545";
+        if(!ak.equals(null)){
+            System.out.println("11");
         }
-        List<Long> list = new ArrayList<>();
-        list.addAll(null);
-//        Integer a = 1;
-//        System.out.println(a);
-//        changeValue(a);
-//        System.out.println(goodsTotal);
-//aStr为"1"
-        // hutool工具类测试
-//        String aStr = Convert.toStr(a);
-//        System.out.println(aStr);
 
-//        /**
-////         * &&条件执行顺序
-////         */
-////        Map map = new HashMap();
-////        map = null;
-////        if (map != null && map.get(1) != null){
-////            System.out.println("非空");
-////        }else{
-////            System.out.println("空");
-////        }
+        String newNum = ak.substring(0,3);
 
+        Set<Integer> a = new HashSet<>();
+        a.add(1);
+        a.add(2);
+        a.stream().filter(null).collect(Collectors.toList());
+        
+        Set<Integer> b = new HashSet<>();
+        b.add(1);
+        b.add(3);
+        a.addAll(b);
+        for (int i= 0; i < 5; i++){
+            System.out.println(i);
+            for (int j = 0; j < 5; j++){
+                System.out.println(j);
+                return;
+            }
+        }
+        System.out.println(a);
+//        List<Integer> b = new ArrayList<>();
+//        b.add(3);
+//        a.retainAll(b);
+//        System.out.println(1);
+        long  cc = a.stream().filter(e -> e.equals(1)).count();
+        System.out.println(cc);
+        long  ca = a.stream().filter(e -> e.equals(4)).count();
+        System.out.println(ca);
+        try {
+            functionA();
+        }catch (Exception e){
+
+        }
     }
 
-    private static void changeValue(Integer a) {
-        a = 2;
+    private static void functionA() throws Exception {
+        throw new Exception("122");
     }
+
 
 }
