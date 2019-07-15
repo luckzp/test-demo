@@ -9,9 +9,35 @@ import java.util.Date;
  */
 public class User {
 
+    private Integer userId;
+    /**
+     * 姓名
+     */
     String userName;
 
+    /**
+     * 日期
+     */
     Date date;
+
+    /**
+     * Gets the value of userId
+     *
+     * @return the value of userId
+     */
+    public Integer getUserId() {
+        return userId;
+    }
+
+    /**
+     * Sets the userId
+     * <p>You can use getUserId() to get the value of userId</p>
+     *
+     * @param userId userId
+     */
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public String getUserName() {
         return userName;
