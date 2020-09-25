@@ -7,6 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,11 +22,12 @@ public class CategoryService {
 
     @Transactional(rollbackFor = RuntimeException.class)
     public List<Category> list() {
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Category category = new Category();
-        category.setName("zp");
-        categoryDAO.save(category);
-        updateService.update(category);
-        return categoryDAO.findAll(sort);
+//        Sort sort = new Sort(Sort.Direction.DESC, "id");
+//        Category category = new Category();
+//        category.setName("zp");
+//        categoryDAO.save(category);
+//        updateService.update(category);
+//        return categoryDAO.findAll(sort);
+        return new ArrayList<>();
     }
 }
